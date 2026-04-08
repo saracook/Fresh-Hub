@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Issues</title>
+  <!-- Crayons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/css/crayons-min.css">
+  <!-- Crayons JavaScript -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <label for="repo-select">Repository</label>
+    <select id="repo-select" style="width: 100%; margin-bottom: 8px;">
+      <option value="">Loading repos...</option>
+    </select>
+
+    <fw-button color="primary" id="view-issues" style="display: none;">View all issues</fw-button>
+    <fw-button color="primary" id="new-issue" style="display: none;">New Issue</fw-button>
+
+    <div id="issues-container" style="display: none;"></div>
+
+    <fw-form id="issue-form" style="display: none;">
+      <fw-input label="Issue Title" name="title" required></fw-input>
+      <fw-textarea label="Issue Description" name="description" required></fw-textarea>
+      <fw-button id="create-issue" color="primary">Create Issue</fw-button>
+    </fw-form>
+  </div>
+  <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

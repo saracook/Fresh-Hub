@@ -1,0 +1,23 @@
+{
+  "freshdesk_domain": {
+    "description": "Your Freshdesk domain (e.g. mycompany.freshdesk.com)",
+    "type": "text",
+    "required": true,
+    "secure": false,
+    "display_name": "Freshdesk Domain"
+  },
+  "github_org": {
+    "description": "Enter your GitHub organisation or user name",
+    "type": "text",
+    "required": true,
+    "secure": false,
+    "display_name": "GitHub Org"
+  },
+  "github_repo": {
+    "description": "Enter the GitHub repository name",
+    "type": "text",
+    "required": true,
+    "secure": false,
+    "display_name": "GitHub Repository"
+  }
+}

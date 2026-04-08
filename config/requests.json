@@ -1,0 +1,53 @@
+{
+  "create_issue": {
+    "schema": {
+      "method": "POST",
+      "host": "api.github.com",
+      "path": "/repos/<%= context.owner %>/<%= context.repo %>/issues",
+      "headers": {
+        "Authorization": "Bearer <%= access_token %>",
+        "Content-Type": "application/json",
+        "user-agent": "freshworks app"
+      },
+      "query": {}
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "fetch_issues": {
+    "schema": {
+      "method": "GET",
+      "host": "api.github.com",
+      "path": "/repos/<%= context.owner %>/<%= context.repo %>/issues",
+      "headers": {
+        "Authorization": "Bearer <%= access_token %>",
+        "Content-Type": "application/json",
+        "user-agent": "freshworks app"
+      },
+      "query": {}
+    },
+    "options": {
+      "isOAuth": true
+    }
+  },
+  "fetch_repos": {
+    "schema": {
+      "method": "GET",
+      "host": "api.github.com",
+      "path": "/user/repos",
+      "headers": {
+        "Authorization": "Bearer <%= access_token %>",
+        "Content-Type": "application/json",
+        "user-agent": "freshworks app"
+      },
+      "query": {
+        "per_page": "100",
+        "sort": "full_name"
+      }
+    },
+    "options": {
+      "isOAuth": true
+    }
+  }
+}

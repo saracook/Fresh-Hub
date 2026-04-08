@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Issues</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/css/crayons-min.css">
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+</head>
+<body>
+  <fw-tabs active-tab-name="create">
+    <fw-tab slot="tab" name="create">Create Issue</fw-tab>
+    <fw-tab slot="tab" name="issues">View Issues</fw-tab>
+
+    <fw-tab-panel name="create">
+      <fw-input label="Issue Title" name="title" required></fw-input>
+      <fw-textarea label="Issue Description" name="description" required></fw-textarea>
+      <fw-button id="create-issue" color="primary">Create Issue</fw-button>
+    </fw-tab-panel>
+
+    <fw-tab-panel name="issues">
+      <div id="issues-container"></div>
+    </fw-tab-panel>
+  </fw-tabs>
+
+  <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+  <script src="scripts/modal.js"></script>
+</body>
+</html>
